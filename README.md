@@ -1,5 +1,5 @@
-With capulet, you parse a generation object from an array of required fields
-mixed with any number of object sources.
+With capulet, you parse a configuration object from an array of required fields
+followed by any number of object sources.
 
 If any key is missing after merging the object sources, capulet will throw. If
 you want a key to be optional, you should supply a default value object somewhere
