@@ -2,7 +2,7 @@
   "name": "capulet",
   "version": "0.1.2",
   "description": "",
-  "main": "index.js",
+  "main": "module.js",
   "scripts": {
     "test": "mocha --harmony-async-await",
     "lint": "eslint .",
