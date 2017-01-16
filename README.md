@@ -6,7 +6,8 @@ you want a key to be optional, you should supply a default value object somewher
 in the chain (that value can be undefined or null).
 
 The new config object is populated by merging in objects left to right (like
-`Object.assign` or `_.merge`).
+`Object.assign` or `_.merge`). Any defaults should be added first, and then the user
+configuration source.
 
 ```javascript
 
@@ -15,9 +16,9 @@ const capulet = require('capulet');
 const config = capulet([
 	'db',
 	'templateDirectory',
-], process.env, {
+], {
 	'db': 'mongodb://localhost:27017/mydb',
-});
+}, process.env);
 
 const db = config.get('db');
 
